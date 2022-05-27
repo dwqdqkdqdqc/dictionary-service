@@ -1,5 +1,6 @@
 package ru.sitronics.tn.dicproxyservice.controller;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,6 @@ public class DicProxyController {
         dics.put("organisations", DicOrgs.response());
         dics.put("specMark", DicSpecMark.response());
         dics.put("status", DicStatus.response());
-        return ResponseEntity.ok(dics);
+        return ResponseEntity.ok().header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*").body(dics);
     }
 }
