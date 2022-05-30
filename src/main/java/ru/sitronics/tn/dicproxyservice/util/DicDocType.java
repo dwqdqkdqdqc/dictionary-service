@@ -33,7 +33,7 @@ public enum DicDocType {
     CARGO_CUSTOMS_DECLARATION("Грузовая таможенная декларация"),
     WAYBILL("Транспортная накладная"),
     SPECIFICATION("Спецификация"),
-    QUALITY_DOCUMENTS("Документы о качестве");  //(проставление отметки ТН)
+    QUALITY_DOCUMENTS("Документы о качестве (проставление отметки ТН)");
     /*  RECEIPT_OF_CARGO_RECEPTION, //Квитанция о приеме груза
       AIR_WAYBILL, //Авиа-накладная
       RECEIPT_OF_POSTAL_ITEMS, //Квитанция о приеме почтовых отправлений
