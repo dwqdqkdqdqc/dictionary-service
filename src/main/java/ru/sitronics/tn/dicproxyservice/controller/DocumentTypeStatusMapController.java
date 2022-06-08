@@ -17,7 +17,7 @@ import static ru.sitronics.tn.dicproxyservice.util.Utils.toListOfJsonMap;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/document-type-status-map")
+@RequestMapping("/dic/doctype-status-map")
 public class DocumentTypeStatusMapController {
 
     private final DocumentTypeStatusMapService documentTypeStatusMapService;
@@ -28,7 +28,7 @@ public class DocumentTypeStatusMapController {
         List<DocumentTypeStatusMapDto> docTypeStatusMap = documentTypeStatusMapService.getAllDocumentTypeStatusMaps();
 
         List<JsonMap> list = toListOfJsonMap(docTypeStatusMap);
-        Response response = new Response(Map.of("documentTypeStatusMap", list));
+        Response response = new Response(Map.of("docTypeStatusMap", list));
         return ResponseEntity.ok().header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*").body(response.getDic());
     }
 
@@ -38,7 +38,7 @@ public class DocumentTypeStatusMapController {
         List<DocumentTypeStatusMapDto> docTypeStatusMap = documentTypeStatusMapService.getDocumentTypeStatusMapByDocumentType(documentType);
 
         List<JsonMap> list = toListOfJsonMap(docTypeStatusMap);
-        Response response = new Response(Map.of("documentTypeStatusMap", /*jsonMap*/list));
+        Response response = new Response(Map.of("docTypeStatusMap", /*jsonMap*/list));
         return ResponseEntity.ok().header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*").body(response.getDic());
     }
 }
