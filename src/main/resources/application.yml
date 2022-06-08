@@ -10,10 +10,8 @@ spring:
     open-in-view: false
     show-sql: true
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DATABASE:tn_db}
+    url: jdbc:postgresql://${DB_HOST:213.108.129.175}:${DB_PORT:5432}/${DATABASE:postgres}
     username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:postgres}
+    password: ${DB_PASSWORD:transneft}
     driver-class-name: org.postgresql.Driver
-  sql:
-    init:
-      mode: never
+  sql.init.mode: never
