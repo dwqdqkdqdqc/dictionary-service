@@ -28,7 +28,7 @@ public class DicProxyController {
         dics.put("organisations", DicOrgs.response());
         dics.put("specMark", DicSpecMark.response());
         dics.put("status", DicStatus.response());
-        dics.put("documentTypeStatusMap", getAllDocumentTypeStatusMaps());
+        dics.put("docTypeStatusMap", getAllDocumentTypeStatusMaps());
         return ResponseEntity.ok().header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*").body(dics);
     }
 
