@@ -18,7 +18,6 @@ public enum DicStatus {
     ACTIVE("действует"),
     PROVIDED("предоставлен"),
     ACCEPTED("принят"),
-    WORK_IN_PROGRESS("в работе"),
     DECLINED("отклонен"),
     REQUIRES_TO_SIGN("требуется подписать"),
     REQUIRES_A_RESPONSE_SIGNATURE("требуется ответная подпись"),
