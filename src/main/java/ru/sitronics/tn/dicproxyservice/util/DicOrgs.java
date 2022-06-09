@@ -10,14 +10,14 @@ import java.util.Map;
 @Getter
 @RequiredArgsConstructor
 public enum DicOrgs {
-    Org_1("Организация 1"),
-    Org_2("Организация 2"),
-    Org_3("Организация 3"),
-    Org_4("Организация 4"),
-    Org_5("Организация 5"),
-    Org_6("Организация 6"),
-    Org_7("Организация 7"),
-    Org_8("Организация 8");
+    Contractor_1("Организация 1"),
+    Contractor_2("Организация 2"),
+    Contractor_3("Организация 3"),
+    Contractor_4("Организация 4"),
+    Contractor_5("Организация 5"),
+    Contractor_6("Организация 6"),
+    Contractor_7("Организация 7"),
+    Contractor_8("Организация 8");
 
     private final String value;
 

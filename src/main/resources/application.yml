@@ -1,5 +1,10 @@
 server:
   port: ${SERVER_PORT:8080}
+  servlet:
+    encoding:
+      charset: UTF-8 # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly
+      enabled: true # Enable http encoding support
+      force: true
 
 spring:
   jackson:
@@ -14,4 +19,6 @@ spring:
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:transneft}
     driver-class-name: org.postgresql.Driver
-  sql.init.mode: never
+  sql.init:
+    mode: never
+    encoding: UTF-8
