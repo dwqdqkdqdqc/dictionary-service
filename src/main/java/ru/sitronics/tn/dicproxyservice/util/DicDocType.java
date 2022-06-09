@@ -15,7 +15,7 @@ public enum DicDocType {
     MTR_SUPPLY_CONTRACT("Договор на поставку МТР (включая дополнительные соглашения)"),
     SPECIFICATION_TO_THE_MTR_CONTRACT("Спецификация к договору МТР"),
     INFORMATION_ON_THE_SUPPLIERS_CHAIN_OF_OWNERSHIP("Сведения о цепочке собственников Поставщика"),
-    MTP_INSURANCE_POLICY("Полис страхования МТР"),
+    MTR_INSURANCE_POLICY("Полис страхования МТР"),
     MTR_PRODUCTION_AND_SHIPMENT_PLAN("План изготовления и отгрузки МТР"),
     PROGRESS_OF_PRODUCTION_AND_PREPARATION_FOR_SHIPMENT_OF_MTR("Информация о ходе изготовления и подготовке к отгрузке МТР"),
     DESIGN_DOCUMENTS_FOR_THE_SUPPLIER("Конструкторская документация (для поставщика)"),
