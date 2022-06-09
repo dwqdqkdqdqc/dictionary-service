@@ -8,8 +8,6 @@ import java.util.List;
 
 @Repository
 public interface DictionaryRepository extends JpaRepository<DictionaryItem, Long> {
-    List<DictionaryItem> findAllByActiveTrueOrderByType();
-    List<DictionaryItem> findAllByActiveTrueOrderByOrd();
+    List<DictionaryItem> findAllByActiveTrueOrderByTypeAscOrdAsc();
     List<DictionaryItem> findAllByTypeAndActiveTrueOrderByOrd(String type);
-//    DictionaryItem findAllByTypeAndCodeAndActiveTrueOrderByOrd(String type, String code);
 }
