@@ -6,9 +6,10 @@ server:
       enabled: true # Enable http encoding support
       force: true
 
+jdbcAppName: "Microcervice: ${spring.application.name}"
+
 spring:
-  application:
-    name: dictionary-service
+  application.name: dictionary-service
   profiles:
     active: postgres
 
