@@ -6,8 +6,6 @@ server:
       enabled: true # Enable http encoding support
       force: true
 
-jdbcAppName: "Microservice: ${spring.application.name}"
-
 spring:
   application.name: dictionary-service
   profiles:
