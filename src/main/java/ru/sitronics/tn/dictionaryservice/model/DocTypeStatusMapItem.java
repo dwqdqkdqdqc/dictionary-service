@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import java.util.Objects;
 
 @Getter
-@ToString
+@ToString(callSuper = true)
 @Entity
 @Table(name = "map_doc_type_status")
 public class DocTypeStatusMapItem extends BaseEntityLongId {
