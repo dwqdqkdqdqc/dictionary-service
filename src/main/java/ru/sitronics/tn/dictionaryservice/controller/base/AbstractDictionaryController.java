@@ -1,6 +1,7 @@
 package ru.sitronics.tn.dictionaryservice.controller.base;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import ru.sitronics.tn.dictionaryservice.model.base.Dictionary;
 import ru.sitronics.tn.dictionaryservice.service.base.DictionaryService;
@@ -28,7 +29,7 @@ public class AbstractDictionaryController<E extends Dictionary, S extends Dictio
 
     @Override
     public ResponseEntity<E> save(E entity) {
-        return ResponseEntity.ok(service.save(entity));
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(entity));
     }
 
     @Override
