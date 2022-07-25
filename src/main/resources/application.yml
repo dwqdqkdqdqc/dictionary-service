@@ -13,14 +13,16 @@ spring:
   jackson:
     default-property-inclusion: non_null
   jpa:
+    hibernate:
+      ddl-auto: validate
     properties:
       open-in-view: false
       show-sql: true
       hibernate:
-        ddl-auto: validate
         default_batch_fetch_size: 20
         # https://stackoverflow.com/questions/21257819/what-is-the-difference-between-hibernate-jdbc-fetch-size-and-hibernate-jdbc-batc
         jdbc.batch_size: 20
+
   sql.init:
     mode: never
     encoding: UTF-8

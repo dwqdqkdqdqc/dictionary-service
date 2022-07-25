@@ -37,7 +37,6 @@ public class DictionaryService {
     private final NciCustomerRepository customerRepo;
     private final NciCountryRepository countryRepo;
     private final NciAccessLimitationRepository accessLimitationRepo;
-
     private final NciProductionStageRepository productionStageRepo;
 
     public Map<String, Object> getAllDict() {
@@ -67,12 +66,25 @@ public class DictionaryService {
 
     public Map<String, Object> getAllDictExt() {
         Map<String, Object> dicts = new HashMap<>();
+        dicts.put("customer", getDictCustomer(customerRepo));
         dicts.put("docType", getDictExt(docTypeRepo));
         dicts.put("docStatus", getDictExt(docStatusRepo));
         dicts.put("specMark", getDictExt(specMarkRepo));
         dicts.put("taskType", getDictExt(taskTypeRepo));
         dicts.put("taskStatus", getDictExt(taskStatusRepo));
         dicts.put("organisations", getDictList(orgRepo));
+        dicts.put("country", getDictExt(countryRepo));
+        dicts.put("units", getDictExt(unitsRepo));
+        dicts.put("typeOfTransport", getDictExt(typeOfTransportRepo));
+        dicts.put("terminationCode", getDictExt(terminationCodeRepo));
+        dicts.put("pidNumber", getDictExt(pidNumberRepo));
+        dicts.put("ost", getDictExt(ostRepo));
+        dicts.put("ostAgent", getDictExt(ostAgentRepo));
+        dicts.put("object", getDictExt(objectRepo));
+        dicts.put("mtrType", getDictExt(mtrTypeRepo));
+        dicts.put("deliveryMethod", getDictExt(deliveryMethodRepo));
+        dicts.put("accessLimitation", getDictExt(accessLimitationRepo));
+        dicts.put("productionStage", getDictExt(productionStageRepo));
         return dicts;
     }
 

@@ -5,11 +5,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.sitronics.tn.dictionaryservice.constants.ControllerConstants;
 import ru.sitronics.tn.dictionaryservice.service.DictionaryService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/dict")
+@RequestMapping(ControllerConstants.DICT_SERVICE_PATH)
 public class DictionaryController {
     private final DictionaryService dictionaryService;
 

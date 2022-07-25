@@ -7,7 +7,6 @@ public class CustomerDto {
     private String code;
     private String shortValue;
     private String fullValue;
-    private int internalGUID;
     private String inn;
     private String kpp;
     private String okpo;
@@ -19,6 +18,6 @@ public class CustomerDto {
     private String phone;
     private String fax;
     private String email;
-    private String adress;
+    private String address;
     private String customerType;
 }

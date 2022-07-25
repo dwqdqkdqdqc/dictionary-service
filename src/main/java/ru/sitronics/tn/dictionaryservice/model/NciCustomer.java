@@ -2,6 +2,7 @@ package ru.sitronics.tn.dictionaryservice.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 import ru.sitronics.tn.dictionaryservice.model.base.Dictionary;
 
@@ -9,12 +10,12 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Getter
+@Setter
 @NoArgsConstructor
-@ToString
+@ToString(callSuper = true)
 @Entity
 @Table(name = "nci_customer")
 public class NciCustomer extends Dictionary {
-    private int internalGUID;
     private String inn;
     private String kpp;
     private String okpo;
@@ -26,6 +27,6 @@ public class NciCustomer extends Dictionary {
     private String phone;
     private String fax;
     private String email;
-    private String adress;
+    private String address;
     private String customerType;
 }
