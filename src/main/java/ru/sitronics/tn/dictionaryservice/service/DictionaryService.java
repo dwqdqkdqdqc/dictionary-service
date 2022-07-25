@@ -3,6 +3,7 @@ package ru.sitronics.tn.dictionaryservice.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import ru.sitronics.tn.dictionaryservice.dto.CustomerDto;
 import ru.sitronics.tn.dictionaryservice.dto.DictionaryItemDto;
 import ru.sitronics.tn.dictionaryservice.model.DocTypeStatusMapItem;
 import ru.sitronics.tn.dictionaryservice.model.base.Dictionary;
@@ -24,9 +25,24 @@ public class DictionaryService {
     private final NciTaskStatusRepository taskStatusRepo;
     private final NciOrgsRepository orgRepo;
     private final MapDocTypeStatusRepository statusMapRepository;
+    private final NciUnitsRepository unitsRepo;
+    private final NciTypeOfTransportRepository typeOfTransportRepo;
+    private final NciTerminationCodeRepository terminationCodeRepo;
+    private final NciPidNumberRepository pidNumberRepo;
+    private final NciOstRepository ostRepo;
+    private final NciOstAgentRepository ostAgentRepo;
+    private final NciObjectRepository objectRepo;
+    private final NciMtrTypeRepository mtrTypeRepo;
+    private final NciDeliveryMethodRepository deliveryMethodRepo;
+    private final NciCustomerRepository customerRepo;
+    private final NciCountryRepository countryRepo;
+    private final NciAccessLimitationRepository accessLimitationRepo;
+
+    private final NciProductionStageRepository productionStageRepo;
 
     public Map<String, Object> getAllDict() {
         Map<String, Object> dicts = new HashMap<>();
+        dicts.put("customer", getDictCustomer(customerRepo));
         dicts.put("docType", getDict(docTypeRepo));
         dicts.put("docStatus", getDict(docStatusRepo));
         dicts.put("specMark", getDict(specMarkRepo));
@@ -34,6 +50,18 @@ public class DictionaryService {
         dicts.put("taskStatus", getDict(taskStatusRepo));
         dicts.put("organisations", getDictList(orgRepo));
         dicts.put("statusMap", getStatusMap());
+        dicts.put("country", getDict(countryRepo));
+        dicts.put("units", getDict(unitsRepo));
+        dicts.put("typeOfTransport", getDict(typeOfTransportRepo));
+        dicts.put("terminationCode", getDict(terminationCodeRepo));
+        dicts.put("pidNumber", getDict(pidNumberRepo));
+        dicts.put("ost", getDict(ostRepo));
+        dicts.put("ostAgent", getDict(ostAgentRepo));
+        dicts.put("object", getDict(objectRepo));
+        dicts.put("mtrType", getDict(mtrTypeRepo));
+        dicts.put("deliveryMethod", getDict(deliveryMethodRepo));
+        dicts.put("accessLimitation", getDict(accessLimitationRepo));
+        dicts.put("productionStage", getDict(productionStageRepo));
         return dicts;
     }
 
@@ -91,5 +119,16 @@ public class DictionaryService {
         List<String> statuses = new ArrayList<>();
         statusMapItems.forEach(el -> statuses.add(el.getValue()));
         return statuses.size() > 0 ? statuses : null;
+    }
+
+    private <T extends Dictionary> List<CustomerDto> getDictCustomer(DictionaryRepository<T> repo) {
+        List<CustomerDto> list = new ArrayList<>();
+        List<T> items = repo.findAllByActiveTrueOrderByOrdAsc();
+        items.forEach(el -> {
+            CustomerDto item = new CustomerDto();
+            BeanUtils.copyProperties(el, item);
+            list.add(item);
+        });
+        return list;
     }
 }
