@@ -4,13 +4,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.sitronics.tn.dictionaryservice.constants.ControllerConstants;
 import ru.sitronics.tn.dictionaryservice.controller.base.AbstractDictionaryController;
-import ru.sitronics.tn.dictionaryservice.model.NciTaskStatus;
-import ru.sitronics.tn.dictionaryservice.service.NciTaskStatusService;
+import ru.sitronics.tn.dictionaryservice.model.NciObject;
+import ru.sitronics.tn.dictionaryservice.service.NciObjectService;
 
 @RestController
-@RequestMapping(ControllerConstants.TASK_STATUS_PATH)
-public class TaskStatusController extends AbstractDictionaryController<NciTaskStatus, NciTaskStatusService> {
-    public TaskStatusController(NciTaskStatusService service) {
+@RequestMapping(ControllerConstants.OBJECTS_PATH)
+public class ObjectController extends AbstractDictionaryController<NciObject, NciObjectService> {
+
+    public ObjectController(NciObjectService service) {
         super(service);
     }
 }

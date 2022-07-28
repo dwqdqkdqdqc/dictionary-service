@@ -10,7 +10,7 @@ import ru.sitronics.tn.dictionaryservice.util.ObjectUtils;
 import java.util.List;
 
 @RequiredArgsConstructor
-public abstract class AbstractDictionatyService<E extends Dictionary, R extends DictionaryRepository<E>> implements DictionaryService<E> {
+public abstract class AbstractDictionaryService<E extends Dictionary, R extends DictionaryRepository<E>> implements DictionaryService<E> {
     protected final R repository;
 
     @Override

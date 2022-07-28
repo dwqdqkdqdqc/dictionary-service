@@ -7,5 +7,5 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "nci_type_of_transport")
-public class NciTypeOfTransport extends Dictionary {
+public class NciTypeTransport extends Dictionary {
 }

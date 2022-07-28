@@ -26,7 +26,7 @@ public class DictionaryService {
     private final NciOrgsRepository orgRepo;
     private final MapDocTypeStatusRepository statusMapRepository;
     private final NciUnitsRepository unitsRepo;
-    private final NciTypeOfTransportRepository typeOfTransportRepo;
+    private final NciTypeTransportRepository typeOfTransportRepo;
     private final NciTerminationCodeRepository terminationCodeRepo;
     private final NciPidNumberRepository pidNumberRepo;
     private final NciOstRepository ostRepo;
