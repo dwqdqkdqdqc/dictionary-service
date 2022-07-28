@@ -22,4 +22,5 @@ public class ControllerConstants {
     public static final String ACCESS_LIMITATIONS_PATH = DICT_SERVICE_PATH + "/accessLimitations";
     public static final String MAP_DOC_TYPES_STATUSES_PATH = DICT_SERVICE_PATH + "/mapDocTypesStatuses";
     public static final String MAP_DOC_TYPES_PROCESS_PATH = DICT_SERVICE_PATH + "/mapDocTypesProcess";
+    public static final String NCI_USER_PATH = DICT_SERVICE_PATH + "/users";
 }
