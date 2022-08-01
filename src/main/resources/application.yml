@@ -7,7 +7,7 @@ server:
 
 spring:
   application.name: dictionary-service
-  profiles.active: postgres
+  profiles.active: dev, dev-postgres
 
   jackson:
     default-property-inclusion: non_null
