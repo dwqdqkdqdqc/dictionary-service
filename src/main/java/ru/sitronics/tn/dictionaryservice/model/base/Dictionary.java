@@ -1,6 +1,7 @@
 package ru.sitronics.tn.dictionaryservice.model.base;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
 
@@ -8,6 +9,7 @@ import javax.persistence.MappedSuperclass;
 import java.util.Objects;
 
 @Getter
+@Setter
 @ToString(callSuper = true)
 @MappedSuperclass
 public abstract class Dictionary extends BaseEntityLongId {
