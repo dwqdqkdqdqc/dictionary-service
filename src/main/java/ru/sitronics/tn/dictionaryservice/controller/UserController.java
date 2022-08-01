@@ -9,11 +9,11 @@ import ru.sitronics.tn.dictionaryservice.model.NciUser;
 import ru.sitronics.tn.dictionaryservice.service.NciUserService;
 import ru.sitronics.tn.dictionaryservice.service.base.CustomAbstractDictService;
 
-@RestController
-@RequestMapping(ControllerConstants.NCI_USER_PATH)
-public class UserController extends CustomAbstractDictController<NciUser, NciUserService> {
-
-    public UserController(NciUserService service) {
-        super(service);
-    }
-}
+//@RestController
+//@RequestMapping(ControllerConstants.NCI_USER_PATH)
+//public class UserController extends CustomAbstractDictController<NciUser, NciUserService> {
+//
+//    public UserController(NciUserService service) {
+//        super(service);
+//    }
+//}
